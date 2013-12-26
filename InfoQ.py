@@ -170,7 +170,7 @@ class InfoQ(BasicNewsRecipe):
                     item['description'] = get_text(item_div.p)
 
                     author_span = item_div.find('span', { 'class': 'author' })
-                    date_text = str(author_span.contents[-1])
+                    date_text = str(author_span.contents[2])
                     item['date'] = parse_date(date_text)
                     
                     print '>>> Item parsed: ', item
